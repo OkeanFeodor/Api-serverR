@@ -1,14 +1,6 @@
 import mysql from 'mysql2'
-/*
-const pool = mysql.createPool({
-    host: '127.0.0.1',
-    user: 'root',
-    password: 'password',
-    database: 'users_app'
-}).promise()
-*/
-
 import dotenv from 'dotenv'
+
 dotenv.config()
 
 const pool = mysql.createPool({
@@ -46,11 +38,11 @@ export async function createUser(user, passwordd) {
 }
 
 //##############################################
-
+/*
 const result = await createUser('admin6', 'admin')
 console.log(result)
 
-/*
+
 
 const user = await getUser(2)
 console.log(user)
